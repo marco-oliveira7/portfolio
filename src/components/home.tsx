@@ -37,15 +37,30 @@ const Home = () => {
         />
         <nav className="w-full text-xl sm:text-2xl">
           <ul className="font-semibold tracking-wide flex justify-evenly">
-            <a href="#expertise" className="cursor-pointer z-10">
+            <motion.a
+              animate={{ zIndex: 3 }}
+              transition={{ duration: 7, ease: "easeIn" }}
+              href="#expertise"
+              className="cursor-pointer"
+            >
               Expertise
-            </a>
-            <a href="#projects" className="cursor-pointer z-10">
+            </motion.a>
+            <motion.a
+              animate={{ zIndex: 3 }}
+              transition={{ duration: 7, ease: "easeIn" }}
+              href="#projects"
+              className="cursor-pointer"
+            >
               Projects
-            </a>
-            <a href="#contact" className="cursor-pointer z-10">
+            </motion.a>
+            <motion.a
+              animate={{ zIndex: 3 }}
+              transition={{ duration: 7, ease: "easeIn" }}
+              href="#contact"
+              className="cursor-pointer"
+            >
               Contact
-            </a>
+            </motion.a>
           </ul>
         </nav>
         <div>
