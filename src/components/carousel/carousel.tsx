@@ -31,7 +31,7 @@ const Carousel: React.FC = () => {
     },
   ];
 
-  const margin = 20;
+  const [margin, setMargin] = useState(20);
   const intervalTime = 4000;
 
   // Resize handler
@@ -40,6 +40,11 @@ const Carousel: React.FC = () => {
     const h = window.innerHeight * 0.34;
     setWidth(w);
     setHeight(h);
+    if (window.innerWidth <= 768) {
+      setMargin(0);
+    } else {
+      setMargin(20);
+    }
   }, []);
 
   // Mover slides
@@ -107,7 +112,7 @@ const Carousel: React.FC = () => {
             style={{
               width: `${width * items.length}px`,
               transform: `translate3d(${
-                currIndex * -width + width / 2 + window.innerWidth / 2
+                currIndex * -width + window.innerWidth / 2 - width / 2
               }px, 0, 0)`,
             }}
           >
@@ -137,13 +142,9 @@ const Carousel: React.FC = () => {
                     <div
                       className={`${styles["item__3d-frame__box"]} ${styles["item__3d-frame__box--front"]}`}
                     >
-                      <img
-                        src={item.img}
-                        className={`scale-50 ${
-                          item.text === "Online Chat" ? "absolute left-4" : ""
-                        }`}
-                        alt=""
-                      />
+                      <a href={item.link} target="_blank" className="">
+                        <img src={item.img} className={`scale-50 `} alt="" />
+                      </a>
                     </div>
                     <div
                       className={`${styles["item__3d-frame__box"]} ${styles["item__3d-frame__box--left"]}`}

@@ -51,6 +51,16 @@ body > .carousel {
   right: 30%;
 }
 
+@media screen and (width < 768px) {
+  .carousel__prev {
+    left: 15%;
+  }
+
+  .carousel__next {
+    right: 15%;
+  }
+}
+
 .carousel__body {
   width: 100%;
   padding: 30px 0 0 0;
@@ -59,18 +69,16 @@ body > .carousel {
 
 .carousel__body .carousel__slider {
   position: relative;
+  display: flex; /* mantém os itens lado a lado */
+  justify-content: center; /* ajuda no alinhamento */
   transition: transform 1s ease-in-out;
   background: var(--crsl-bg);
 }
-
 .carousel__body .carousel__slider__item {
-  position: relative;
-  display: block;
-  float: left;
+  flex: 0 0 auto; /* impede que encolham */
+  margin: 0 10px; /* espaçamento lateral */
   box-sizing: border-box;
-  transform: translateX(calc(-15vw)); /* move 25% da largura da tela */
 }
-
 .carousel__body .carousel__slider__item .item__3d-frame {
   position: relative;
   width: 100%;

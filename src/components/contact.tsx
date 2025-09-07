@@ -33,14 +33,14 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="py-4 flex flex-col h-screen items-center justify-between"
+      className="py-4 flex flex-col sm:h-screen h-[110vh] items-center justify-between"
     >
       <h1 className="text-2xl uppercase tracking-widest ">Contact</h1>
-      <div className="w-full h-full flex justify-around items-center">
+      <div className="w-full h-full flex flex-col sm:flex-row justify-around items-center">
         <form
           onSubmit={submitForm}
           ref={formRef}
-          className="border-2 border-zinc-600 bg-[#191b1f] rounded-2xl w-2/7 h-9/12 flex flex-col items-center justify-center"
+          className="border-2 border-zinc-600 bg-[#191b1f] rounded-2xl w-6/7 sm:w-4/7 lg:w-2/7 h-10/12 sm:h-9/12 py-4 flex flex-col items-center justify-center"
         >
           <div className="h-full flex flex-col justify-end">
             <label htmlFor="name">
@@ -51,7 +51,7 @@ const Contact = () => {
                 name="user_name"
                 id="name"
                 type="text"
-                className="mb-10 bg-[#1f1f25] shadow-lg shadow-zinc-800 rounded-lg py-1 px-2 outline-0 focus:shadow-xl"
+                className="mb-10 bg-[#1f1f25] shadow-zinc-800 rounded-lg py-1 px-2 outline-0 transition-all duration-75 focus:outline-2"
               />
             </label>
             <label htmlFor="email">
@@ -62,7 +62,7 @@ const Contact = () => {
                 name="user_email"
                 id="email"
                 type="text"
-                className="mb-10 bg-[#1f1f25] shadow-lg shadow-zinc-800 rounded-lg py-1 px-2 outline-0 focus:shadow-xl"
+                className="mb-10 bg-[#1f1f25] shadow-zinc-800 rounded-lg py-1 px-2 outline-0 transition-all duration-75 focus:outline-2"
               />
             </label>
             <label htmlFor="message">
@@ -74,7 +74,7 @@ const Contact = () => {
                 id="message"
                 cols={10}
                 rows={3}
-                className="bg-[#1f1f25] shadow-lg shadow-zinc-800 rounded-lg py-1 px-2 outline-0 focus:shadow-xl w-full"
+                className="bg-[#1f1f25] shadow-zinc-800 rounded-lg py-1 px-2 outline-0 transition-all duration-75 focus:outline-2 w-full"
               />
             </label>
           </div>
@@ -82,10 +82,12 @@ const Contact = () => {
             <Button className="h-14 w-28 cursor-pointer">Send</Button>
           </div>
         </form>
-        <div className="flex flex-col justify-between h-9/12">
-          <div className="bg-[#13171E] rounded-2xl p-5 shadow-2xl shadow-zinc-700">
-            <h1 className="mb-10 text-right text-xl">Avaliable to work</h1>
-            <p>
+        <div className="flex flex-row sm:flex-col items-center sm:items-start justify-between max-[400px]:justify-center w-full sm:w-auto h-9/12">
+          <div className="bg-[#13171E] rounded-2xl p-5 shadow-2xl shadow-zinc-700 max-[400px]:hidden ">
+            <h1 className="mb-1 sm:mb-10 text-left sm:text-right text-lg sm:text-xl">
+              Avaliable to work
+            </h1>
+            <p className="text-sm sm:text-base">
               Have an exciting project you
               <br /> need help with?
               <br />
@@ -93,7 +95,7 @@ const Contact = () => {
               <br /> me via instant message!
             </p>
           </div>
-          <div className="w-full">
+          <div className="w-1/3 sm:w-full max-[400px]:w-2/3">
             <div className="rounded-xl px-3 py-1 w-full bg-[#22272e] text-right shadow-sm shadow-zinc-800">
               <a
                 href="https://github.com/marco-oliveira7"
