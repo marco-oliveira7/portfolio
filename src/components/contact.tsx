@@ -33,7 +33,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="py-4 flex flex-col sm:h-screen h-[110vh] items-center justify-between"
+      className="py-4 flex flex-col sm:h-screen h-[110vh] items-center justify-between z-[9]"
     >
       <h1 className="text-2xl uppercase tracking-widest ">Contact</h1>
       <div className="w-full h-full flex flex-col sm:flex-row justify-around items-center">

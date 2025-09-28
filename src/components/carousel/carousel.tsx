@@ -2,9 +2,9 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "@/components/carousel/carousel.module.css";
-import chatProject from "@/assets/chat.svg";
+import studyProject from "@/assets/books.png";
 import pomoProject from "@/assets/focus.png";
-import marketProject from "@/assets/market.svg";
+import marketProject from "@/assets/market.png";
 
 const Carousel: React.FC = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -15,18 +15,18 @@ const Carousel: React.FC = () => {
 
   const items = [
     {
-      img: chatProject,
-      link: "https://github.com/marco-oliveira7/chat-app",
-      text: "Online Chat",
+      img: studyProject,
+      link: "https://study-management-two.vercel.app",
+      text: "Study Management",
     },
     {
       img: pomoProject,
-      link: "https://github.com/marco-oliveira7/Pomodoro-App",
+      link: "https://prime-pomodoro.vercel.app/",
       text: "Minimalist Pomodoro",
     },
     {
       img: marketProject,
-      link: "https://github.com/marco-oliveira7/Market-List-app",
+      link: "https://market-list-zeta.vercel.app/",
       text: "Market List",
     },
   ];
